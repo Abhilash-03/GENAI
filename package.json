@@ -2,7 +2,6 @@
   "name": "genai",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "start": "npm app.js",
     "dev": "nodemon app.js",

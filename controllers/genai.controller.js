@@ -4,7 +4,7 @@ const genAI = new GoogleGenerativeAI(process.env.GENAI_API_KEY);
 
 async function genai(req, res) {
     const { prompt } = req.body;
-    // res.setHeader('Content-Type', 'text');
+    res.setHeader('Content-Type', 'text');
   try {
       // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
        // Choose a model that's appropriate for your use case.

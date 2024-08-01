@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(27, 26, 26);
+    color: #cbcbcb;
+}
+
+.heading{
+    font-size: 3.4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #57dac0;
+    text-align: center;
+    padding: 2rem;
+}
+
+.box{
+    max-width: 800px;
+    min-width: 230px;
+    height: 600px;
+    flex-direction: column;
+    margin: auto;
+    background-color: black;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(92, 92, 92);
+}
+
+.box input{
+  position: fixed;
+  bottom: 0;
+  width: 800px;
+  min-width: 230px;
+  height: 60px;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  outline: none;
+  background-color: rgb(23, 23, 23);
+  color: rgb(201, 199, 199);
+  border: none;
+  border-bottom: 2px solid #57dac0;
+  border-radius: 10px 10px 0px 0;
+}
+
+.box .screen{
+    padding: 1rem;
+    line-height: 1.3;
+    letter-spacing: 1.1px;
+    height: 500px;
+    overflow: auto;
+}
+
+.qna{
+    padding-top: 1rem;
+}
+
+.qna h4{
+    font-size: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.box .screen h3{
+    font-size: 2rem;
+}
+.box .screen p{
+    font-size: 1.2rem;
+}
+
+.box .btn{
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    height: 50px;
+    padding: 13px 10px;
+    font-size: 1.4rem;
+    width: 80px;
+    font-weight: bold;
+    background-color: #57dac0;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.box .btn:is(:hover, :focus){
+    background-color: #04715b;
+    color: white;
+}
+
+.error{
+    display: none;
+    color: red;
+}
+
+.answer{
+    padding-top: 10px;
+}
