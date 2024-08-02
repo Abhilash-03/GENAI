@@ -1,4 +1,3 @@
-
 const btn = document.querySelector('.btn');
 const inp = document.getElementById('input');
 const question = document.querySelector('.question');
@@ -6,6 +5,7 @@ const answer = document.querySelector('.answer');
 const error = document.querySelector('.error');
 
 let loading = true;
+
 const genAI = async() => {
     question.innerText = inp.value;
   try {
@@ -17,6 +17,7 @@ const genAI = async() => {
   } finally{
     loading = false;
   }
+
 }
 
 btn.addEventListener('click', async() => {
@@ -24,16 +25,11 @@ btn.addEventListener('click', async() => {
         error.style.display = 'block';
          question.innerText = '';
          answer.innerText = ''
-        btn.setAttribute('disabled', true);
         return;
     }
-    
-    if(loading){
-        answer.innerText = 'Generating....'
-    }
-  const data = await genAI();
-  answer.innerText = data;
-  inp.value = '';
-})
-
-
+    error.style.display = 'none';
+    answer.innerText = 'Generating....';
+    const data = await genAI();
+    answer.innerText = data;
+    inp.value = '';
+  })
