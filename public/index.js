@@ -4,13 +4,14 @@ const question = document.querySelector('.question');
 const answer = document.querySelector('.answer');
 const error = document.querySelector('.error');
 
+const URL = 'https://gemoai.vercel.app';
 let loading = true;
 
 const genAI = async() => {
     question.innerText = inp.value;
   try {
     loading = true;
-    const {data} = await axios.post('http://localhost:3000/api/v1/ai/generate', { prompt: inp.value.trim() });
+    const {data} = await axios.post(`${URL}/api/v1/ai/generate`, { prompt: inp.value.trim() });
     return data;
   } catch (error) {
     console.log(error?.response?.data);
