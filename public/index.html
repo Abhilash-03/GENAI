@@ -5,25 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GENAI MODEL</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <h1 class="heading">GENAI MODEL - GEMO</h1>
-    <section class="box">
-        <div class="screen">
-            <h3>GENAI built on Gemini</h3>
-            <p>Ask your questions, or problems to GENAI?</p>
-            <div class="qna">
-                <h4 class="question">What is an AI in short?</h4>
-                <p class="answer"><span>AI: </span>AI stands for **Artificial Intelligence**. It's essentially **computer systems that can think and learn like humans**.</p>
-                <p class="error">Please provide me with some context or a question. I need more information to understand what you're asking for.</p>
+    <div class="app-shell">
+        <header class="app-header">
+            <div class="app-brand">
+                <div class="brand-icon">G</div>
+                <div class="brand-text">
+                    <h1>Gemo AI Chat</h1>
+                    <p>Powered by Gemini – Ask anything, explore everything.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <div class="inputBox">
-        <input type="text" id="input" placeholder="Ask to AI?" required>
-        <button class="btn">GEN</button>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Online</span>
+            </div>
+        </header>
+
+        <main class="chat-container">
+            <div class="chat-welcome">
+                <h2>Welcome to your AI workspace</h2>
+                <p>Describe a problem, ask a question, or paste code – Gemo will help you reason about it.</p>
+                <ul>
+                    <li>Summarise or explain complex topics</li>
+                    <li>Brainstorm ideas, outlines, or strategies</li>
+                    <li>Debug code, optimise logic, or generate snippets</li>
+                </ul>
+            </div>
+
+            <div class="chat-window">
+                <div class="messages" id="messages">
+                    <div class="message-row ai">
+                        <div class="avatar">G</div>
+                        <div class="bubble">
+                            <div class="meta">
+                                <span class="name">Gemo</span>
+                                <span class="time">Now</span>
+                            </div>
+                            <p class="text initial-answer">Hi, I’m Gemo – your AI assistant. Ask a question below and I’ll do my best to help.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="typing-indicator" id="typingIndicator">
+                    <span></span><span></span><span></span>
+                    <p>Gemo is thinking…</p>
+                </div>
+
+                <p class="error" id="error">
+                    Please provide a question or some context so I can help you better.
+                </p>
+            </div>
+
+            <form class="input-bar" id="chatForm">
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="input"
+                        autocomplete="off"
+                        placeholder="Send a message to Gemo…"
+                        required
+                    />
+                </div>
+                <button type="submit" class="btn" aria-label="Send message">
+                    <span class="btn-label">Send</span>
+                    <span class="btn-icon">➤</span>
+                </button>
+            </form>
+
+            <footer class="chat-footer">
+                <span class="footer-text">
+                    Gemo can make mistakes. Please verify important information.
+                </span>
+            </footer>
+        </main>
     </div>
+
     <script src="index.js"></script>
 </body>
 </html>
